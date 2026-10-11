@@ -18,7 +18,44 @@
   <nav><ul><li><a href="index.html" class="">Home</a></li><li><a href="upcoming-sessions.html" class=" blink">Upcoming Sessions</a></li><li><a href="sessions.html" class="">Sessions</a></li><li><a href="download.html" class="active">Download</a></li><li><a href="about-us.html" class="">About Us</a></li><li><a href="contact-us.html" class="">Contact Us</a></li></ul></nav>
 </div></header>
 <main id="main">
-<section class="page"><div class="container"><h1>Download</h1><ul><li><a href="#">Brochure (placeholder)</a></li><li><a href="#">Syllabus (placeholder)</a></li><li><a href="#">Schedule (placeholder)</a></li></ul></div></section>
+
+<section class="page"><div class="container"><h1 class="dl-title">Download Certificates &amp; ID Cards</h1>
+<div class="thiran-portal-wrap">
+  <div class="tp-card tp-search-card">
+    <div class="tp-card-header"><span class="tp-icon">🎓</span><h2>Certificate Portal</h2>
+      <p>Enter your registered mobile number or email address to access your certificate and ID card.</p></div>
+    <div class="tp-card-body">
+      <div class="tp-fields-row">
+        <div class="tp-field-group"><label for="tp-phone-input">📱 Mobile Number</label>
+          <input type="tel" id="tp-phone-input" class="tp-input" placeholder="e.g. 9876543210" autocomplete="tel" inputmode="numeric"></div>
+        <div class="tp-fields-divider"><span>and / or</span></div>
+        <div class="tp-field-group"><label for="tp-email-input">✉️ Email Address</label>
+          <input type="email" id="tp-email-input" class="tp-input" placeholder="e.g. you@example.com" autocomplete="email"></div>
+      </div>
+      <p class="tp-input-hint">Enter either one, or both for a more precise search.</p>
+      <button id="tp-search-btn" class="tp-btn tp-btn-primary" type="button">Search My Records</button>
+      <div id="tp-error-msg" class="tp-alert tp-alert-error" style="display:none"></div>
+    </div>
+  </div>
+  <div id="tp-results" style="display:none"><h3 class="tp-results-heading">Your Records</h3><div id="tp-results-list"></div></div>
+  <div id="tp-otp-modal" class="tp-modal-overlay" style="display:none">
+    <div class="tp-modal">
+      <button type="button" class="tp-modal-close" id="tp-otp-close" aria-label="Close">&times;</button>
+      <h3>🔐 Verify to Download Certificate</h3>
+      <p class="tp-otp-info">For your security, we'll send a one-time password (OTP) to your registered email before releasing the certificate.</p>
+      <div id="tp-otp-step-send"><button id="tp-otp-send-btn" type="button" class="tp-btn tp-btn-primary">Send OTP</button></div>
+      <div id="tp-otp-step-verify" style="display:none">
+        <div class="tp-field-group"><label for="tp-otp-input">Enter 6-digit OTP</label>
+          <input type="text" id="tp-otp-input" class="tp-input" maxlength="6" inputmode="numeric" autocomplete="one-time-code" placeholder="••••••"></div>
+        <div class="tp-otp-actions"><button id="tp-otp-verify-btn" type="button" class="tp-btn tp-btn-primary">Verify &amp; Download</button>
+          <button id="tp-otp-resend-btn" type="button" class="tp-btn tp-btn-secondary">Resend OTP</button></div>
+      </div>
+      <div id="tp-otp-msg" class="tp-alert" style="display:none"></div>
+    </div>
+  </div>
+</div>
+<script src="js/portal.js"></script>
+</div></section>
 </main>
 <footer>
   <div class="container foot-cols">

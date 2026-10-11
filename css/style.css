@@ -128,3 +128,33 @@ footer a:hover { color:var(--accent); }
   .modal-box button[type=submit], .modal-box .btn.secondary { width:100%; margin-top:8px; }
   .copy { padding:14px 15px; }
 }
+
+/* download / certificate portal */
+.dl-title { text-align:center; font-size:32px; font-weight:600; margin:0 0 24px; }
+.thiran-portal-wrap { max-width:720px; margin:0 auto; font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif; }
+.tp-card { background:#fff; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,.08); overflow:hidden; margin-bottom:20px; }
+.tp-card-header { background:linear-gradient(135deg,#0073aa,#005177); color:#fff; text-align:center; padding:28px 24px; }
+.tp-card-header h2 { color:#fff; margin:6px 0; font-size:24px; } .tp-card-header p { margin:0; opacity:.9; font-size:15px; }
+.tp-icon { font-size:34px; }
+.tp-card-body { padding:28px; }
+.tp-fields-row { display:flex; align-items:flex-end; gap:16px; }
+.tp-field-group { flex:1; } .tp-field-group label { display:block; font-weight:500; color:#555; font-size:14px; margin-bottom:8px; }
+.tp-fields-divider { color:#94a3b8; font-size:13px; padding-bottom:14px; white-space:nowrap; }
+.tp-input { width:100%; padding:12px 15px; border:1px solid #e0e0e0; border-radius:8px; font-size:16px; background:#f9f9f9; transition:.3s; }
+.tp-input:focus { border-color:#0073aa; background:#fff; box-shadow:0 0 0 2px rgba(0,115,170,.1); outline:none; }
+.tp-input-hint { color:#94a3b8; font-size:13px; margin:10px 0 18px; }
+.tp-btn { border:0; border-radius:30px; padding:12px 28px; font-size:16px; font-weight:600; cursor:pointer; transition:transform .2s, box-shadow .2s; }
+.tp-btn-primary { background:linear-gradient(135deg,#0073aa,#005177); color:#fff; box-shadow:0 5px 15px rgba(0,115,170,.3); }
+.tp-btn-primary:hover { transform:translateY(-2px); }
+.tp-btn-secondary { background:#e2e8f0; color:#1e293b; }
+.tp-alert { margin-top:16px; padding:12px 16px; border-radius:8px; font-size:14px; }
+.tp-alert-error { background:#fee2e2; color:#991b1b; } .tp-alert-ok { background:#dcfce7; color:#166534; }
+.tp-results-heading { color:var(--navy); margin:24px 0 12px; }
+.tp-record { display:flex; justify-content:space-between; align-items:center; gap:16px; padding:18px 22px; flex-wrap:wrap; }
+.tp-sub { color:#64748b; font-size:14px; } .tp-actions { display:flex; gap:10px; flex-wrap:wrap; }
+.tp-modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,.5); align-items:center; justify-content:center; z-index:300; padding:16px; }
+.tp-modal { background:#fff; border-radius:12px; padding:28px; width:100%; max-width:440px; position:relative; }
+.tp-modal h3 { margin:0 0 10px; } .tp-otp-info { color:#64748b; font-size:14px; }
+.tp-modal-close { position:absolute; top:8px; right:14px; background:none; border:0; font-size:26px; cursor:pointer; }
+.tp-otp-actions { display:flex; gap:10px; margin-top:14px; flex-wrap:wrap; }
+@media (max-width:921px) { .dl-title { font-size:25px; } .tp-fields-row { flex-direction:column; align-items:stretch; gap:8px; } .tp-fields-divider { text-align:center; padding:0; } .tp-card-body { padding:20px; } }
