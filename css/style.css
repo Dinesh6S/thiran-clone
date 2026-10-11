@@ -106,3 +106,5 @@ footer a:hover { color:var(--accent); }
 .value-card h3 { margin:0 0 8px; color:var(--navy); font-family:'Poppins',sans-serif; }
 .value-card p { margin:0; font-size:14px; color:var(--muted); }
 @media (max-width:900px) { .two-col { grid-template-columns:1fr; } }
+
+.demo-banner { background:#fff3cd; color:#664d03; text-align:center; font-size:13px; padding:6px 12px; }
