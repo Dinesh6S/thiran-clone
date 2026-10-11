@@ -118,7 +118,7 @@ footer a:hover { color:var(--accent); }
   .info-box h2 { text-align:center; }
 }
 @media (max-width:544px) {
-  .topbar .container { flex-direction:column; align-items:center; gap:4px; text-align:center; font-size:13px; }
+  .topbar { display:none; }
   .brand { font-size:17px; }
   .hero { min-height:54vh; }
   .hero h1 { font-size:34px; line-height:40px; }
