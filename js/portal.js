@@ -22,7 +22,7 @@
 
     $('#tp-results-list').innerHTML = found.map((r) => {
       const s = (window.SESSIONS || []).find((x) => x.id === r.session);
-      return `<div class="tp-card tp-record"><div><strong>${esc(r.name)}</strong>
+      return `<div class="tp-card tp-record">${/^data:image\//.test(r.photo || '') ? `<img class="tp-photo" src="${r.photo}" alt="" width="52" height="67">` : ''}<div><strong>${esc(r.name)}</strong>
         <div class="tp-sub">${s ? esc(s.title + ' · ' + s.city + ' · ' + s.date) : 'Session'}</div></div>
         <div class="tp-actions"><button class="tp-btn tp-btn-secondary" data-act="id">Download ID Card</button>
         <button class="tp-btn tp-btn-primary" data-act="cert">Download Certificate</button></div></div>`;

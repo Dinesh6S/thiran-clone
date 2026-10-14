@@ -8,7 +8,7 @@ toTop?.addEventListener('click', () => scrollTo({ top: 0, behavior: 'smooth' }))
 
 let currentSession = null;
 function openRegister(id) { currentSession = id; $('#regModal').classList.add('show'); }
-function closeRegister() { $('#regModal').classList.remove('show'); $('#regMsg').textContent = ''; }
+function closeRegister() { $('#regModal').classList.remove('show'); $('#regMsg').textContent = ''; window.resetPassportPhoto?.(); }
 
 $('#regForm')?.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -23,10 +23,13 @@ $('#regForm')?.addEventListener('submit', (e) => {
   try { list = JSON.parse(localStorage.getItem(KEY)) || []; } catch { /* corrupt data: start fresh */ }
   if (!Array.isArray(list)) list = [];
   list.push({ session: currentSession, name: f.name.value.trim(), email: f.email.value,
-              phone: f.phone.value, remarks: f.remarks.value, at: new Date().toISOString() });
-  localStorage.setItem(KEY, JSON.stringify(list));
+              phone: f.phone.value, remarks: f.remarks.value, photo: window.getPassportPhoto?.() || '',
+              at: new Date().toISOString() });
+  try { localStorage.setItem(KEY, JSON.stringify(list)); }
+  catch { msg.textContent = 'Could not save (browser storage is full or blocked).'; return; }
   msg.textContent = 'Registered! (demo — no payment taken)';
   f.reset();
+  window.resetPassportPhoto?.();
 });
 
 $('#contactForm')?.addEventListener('submit', (e) => {

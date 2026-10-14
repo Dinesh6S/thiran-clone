@@ -6,6 +6,7 @@
 <title>Upcoming Sessions – Thiran Academy Clone</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -40,6 +41,7 @@
       <label>Phone Number<input name="phone" type="tel" required></label>
       <label>Remarks (optional)<textarea name="remarks" rows="2"></textarea></label>
       <label>Upload Photo (passport size)<input name="photo" type="file" accept="image/*" required></label>
+      <div id="cropWrap" hidden><div class="crop-box"><img id="cropImg" alt="Photo to crop"></div><p class="crop-note" id="cropMsg"></p></div>
       <p class="msg" id="regMsg"></p>
       <button class="btn" type="submit">Register and Pay</button>
       <button class="btn secondary" type="button" onclick="closeRegister()">Cancel</button>
@@ -50,6 +52,7 @@
 <script src="js/validate.js"></script>
 <script src="js/sessions.js"></script>
 <script src="js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script><script src="js/photo.js"></script>
 <script>renderSessions('sessionGrid')</script>
 </body>
 </html>
